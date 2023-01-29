@@ -3,7 +3,7 @@ package com.dsa.tree;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class TreeHeight {
+public class HeightDiameter {
 
     public int height(Node root) {
         if (root == null) {
@@ -17,6 +17,14 @@ public class TreeHeight {
         return ans;
 
     }
+
+    public int diameterIterative(Node root) {
+        int l = heightIterative(root.left) +1;
+        int r = heightIterative(root.right) +1 ;
+        return l +r ;
+    }
+    
+
 
     public int heightIterative(Node root) {
         int height = 0;
@@ -43,8 +51,11 @@ public class TreeHeight {
     }
 
     public static void main(String[] args) {
-        TreeHeight h = new TreeHeight();
+        HeightDiameter h = new HeightDiameter();
         System.out.println("Recursive Approach height :" + h.height(Node.buildTree()));
         System.out.println("Iterative Approach height :" + h.heightIterative(Node.buildTree()));
+        System.out.println("Iterative Approach Diameter :" + h.diameterIterative(Node.buildTree()));
+
+
     }
 }

@@ -21,7 +21,7 @@ public class TreeTraversals {
             return;
         }
         inOrderRecursive(root.left);
-        System.out.print(root.getData());
+        System.out.print(" " +root.data);
         inOrderRecursive(root.right);
     }
 
@@ -31,7 +31,7 @@ public class TreeTraversals {
         stack.push(root);
         while (!stack.isEmpty()) {
             Node tmp = stack.pop();
-            System.out.print(tmp.getData());
+            System.out.print(tmp.data);
             list.add(tmp.data);
             if (tmp.right != null) {
                 stack.push(tmp.right);
@@ -56,12 +56,12 @@ public class TreeTraversals {
                 if (!queue.isEmpty())
                     queue.add(null);
             } else {
-                System.out.print(element.getData());
-                if (element.getLeft() != null) {
-                    queue.add(element.getLeft());
+                System.out.print(element.data);
+                if (element.left != null) {
+                    queue.add(element.left);
                 }
-                if (element.getRight() != null) {
-                    queue.add(element.getRight());
+                if (element.right != null) {
+                    queue.add(element.right);
                 }
             }
         }
