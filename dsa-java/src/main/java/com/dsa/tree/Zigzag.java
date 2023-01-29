@@ -3,7 +3,6 @@ package com.dsa.tree;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.stream.IntStream;
 
 public class Zigzag {
     ArrayList<Integer> zigzag(Node root) {
@@ -40,8 +39,7 @@ public class Zigzag {
 
         }
 
-        System.out.println();
-        result.stream().forEach(num -> System.out.print(" " + num));
+      
         return result;
 
     }
@@ -49,7 +47,8 @@ public class Zigzag {
     public static void main(String[] args) {
         Zigzag z = new Zigzag();
         Node root = Node.buildTree();
-        z.zigzag(root);
+
+        z.zigzag(root).stream().forEach(num -> System.out.print(" " + num));
     }
 
 }

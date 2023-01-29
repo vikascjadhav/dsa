@@ -35,7 +35,7 @@ public class HeightDiameter {
 
         while (!q.isEmpty()) {
             Node current = q.poll();
-            if (current.getData() == -1 && !q.isEmpty()) {
+            if (current.data == -1 && !q.isEmpty()) {
                 q.add(seperatorNode);
                 height++;
             } else {
