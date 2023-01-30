@@ -69,8 +69,6 @@ public class TreeTraversals {
 
     ArrayList<Integer> inOrder(Node root) {
         ArrayList<Integer> list = new ArrayList<Integer>();
-
-
         return list;
     }
 
@@ -79,8 +77,6 @@ public class TreeTraversals {
         TreeTraversals traversals = new TreeTraversals();
         Node root = Node.buildTree();
         System.out.println("BFS Result");
-        //bfsTravers(root);
-        //inOrder(root);
         traversals.proOrderRecursive(root);
     }
 }

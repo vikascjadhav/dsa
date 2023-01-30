@@ -31,23 +31,17 @@ public class Zigzag {
                 }
             }
             leftToRight = leftToRight ? false : true;
-          //  IntStream s = IntStream.of(tmp);
-            //s.forEachOrdered(snum -> result.add(snum));
             for(int i =0; i<  tmp.length; i++) {
                 result.add(tmp[i]);
             }
 
         }
-
-      
         return result;
-
     }
 
     public static void main(String[] args) {
         Zigzag z = new Zigzag();
         Node root = Node.buildTree();
-
         z.zigzag(root).stream().forEach(num -> System.out.print(" " + num));
     }
 
