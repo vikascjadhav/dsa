@@ -61,7 +61,6 @@ public class VerticalTraversal {
             List<WrapperNode> lst = map.get(key).stream().collect(Collectors.toList());
             tmpList.addAll(lst);
         }
-      //  tmpList.sort(null);
         Collections.sort(tmpList);
 
         tmpList.stream().forEach(s->ans.add(s.node.data));
